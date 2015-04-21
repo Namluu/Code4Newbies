@@ -1,28 +1,24 @@
 == README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Install rails on windows
+---
+[RailsInstaller for Windows (87.4 MB)](https://s3.amazonaws.com/railsinstaller/Windows/railsinstaller-3.1.0.exe)
 
-Things you may want to cover:
+Checking rails version
+---
+    rails -v
 
-* Ruby version
+Create a new project
+---
+    rails new Code4Newbies
+	
+Init server
+---
+    rails s
 
-* System dependencies
+[http://localhost:3000/](http://localhost:3000/)
 
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
-
-
-Please feel free to use a different markup language if you do not plan to run
-<tt>rake doc:app</tt>.
+Problem with ruby 2.1 on windows
+---
+[Description](http://stackoverflow.com/questions/28139672/ruby-on-rails-windows-installed-using-railsinstaller-fails-to-install-gems-bun)
+[Resolve](https://gist.github.com/fnichol/867550)
