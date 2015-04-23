@@ -1,2 +1,41 @@
-<h1>Pages#contact</h1>
-<p>Find me in app/views/pages/contact.html.erb</p>
+<h3>Contact</h3>
+
+<div class="card z-depth-3">
+	<div class="card-content">
+		Here my office
+
+		<br>
+		<br>
+		<br>
+
+		<div id="map-canvas"></div>
+
+	</div>
+</div>
+
+<style>
+  #map-canvas {
+    width: 100%;
+    height: 400px;
+  }
+</style>
+<script src="https://maps.googleapis.com/maps/api/js"></script>
+<script>
+  function initialize() {
+    var mapCanvas = document.getElementById('map-canvas');
+    var mapOptions = {
+      center: new google.maps.LatLng(10.801362, 106.650777),
+      zoom: 15,
+      mapTypeId: google.maps.MapTypeId.ROADMAP
+    }
+    var map = new google.maps.Map(mapCanvas, mapOptions);
+    // maker on map
+    var maker = new google.maps.Marker({
+    	position: new google.maps.LatLng(10.801362, 106.650777),
+    	title: "Here is my office"
+    });
+
+    maker.setMap(map);
+  }
+  google.maps.event.addDomListener(window, 'load', initialize);
+</script>
