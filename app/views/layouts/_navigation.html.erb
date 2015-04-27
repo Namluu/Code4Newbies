@@ -3,12 +3,13 @@
         <%= link_to "Music4Life", root_path, :class => "brand-logo" %>
         <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="mdi-navigation-menu"></i></a>
         <ul class="right hide-on-med-and-down">
+            <li><%= link_to "Sign up now", signup_path, :class => "waves-effect blue btn-large white-text" %></li>
             <li><a href="<%= pages_about_path %>" title="About"><i class="mdi-action-track-changes"></i></a></li>
             <li><a href="<%= pages_contact_path %>" title="Contact"><i class="mdi-action-perm-phone-msg"></i></a></li>
         </ul>
         <ul class="side-nav" id="mobile-demo">
-            <li><a href="javascript.html">About</a></li>
-            <li><a href="mobile.html">Contact</a></li>
+            <li><a href="<%= pages_about_path %>" title="About">About</a></li>
+            <li><a href="<%= pages_contact_path %>" title="Contact">Contact</a></li>
         </ul>
     </div>
 </nav>
