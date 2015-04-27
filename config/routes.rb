@@ -1,4 +1,8 @@
 Rails.application.routes.draw do
+  resources :microposts
+
+  resources :users
+
   resources :videos
 
   get 'pages/about'
