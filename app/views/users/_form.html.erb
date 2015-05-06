@@ -1,33 +1,46 @@
-<%= form_for(@user) do |f| %>
-  <% if @user.errors.any? %>
-    <div id="error_explanation">
-      <h2><%= pluralize(@user.errors.count, "error") %> prohibited this user from being saved:</h2>
+<div class="row">
+  <%= form_for(@user, :html => {:class => "col s6"}) do |f| %>
 
-      <ul>
-      <% @user.errors.full_messages.each do |message| %>
-        <li><%= message %></li>
-      <% end %>
-      </ul>
+    <% if @user.errors.any? %>
+    <div class="row">
+      <div id="error_explanation">
+        <h2><%= pluralize(@user.errors.count, "error") %> prohibited this user from being saved:</h2>
+
+        <ul>
+        <% @user.errors.full_messages.each do |message| %>
+          <li><%= message %></li>
+        <% end %>
+        </ul>
+      </div>
     </div>
-  <% end %>
+    <% end %>
 
-  <div class="field">
-    <%= f.label :name %><br>
-    <%= f.text_field :name %>
+    <div class="input-field">
+      <i class="mdi-action-account-circle prefix"></i>
+      <%= f.text_field :name, :length => '10' %>
+      <%= f.label :name %>
+    </div>
+    <div class="input-field">
+      <i class="mdi-action-lock prefix"></i>
+      <%= f.text_field :password %>
+      <%= f.label :password %>
+    </div>
+    <div class="input-field">
+      <i class="mdi-action-lock prefix"></i>
+      <%= f.text_field :password_confirmation %>
+      <%= f.label :password_confirmation %>
+    </div>
+    <div class="input-field">
+      <i class="mdi-communication-email prefix"></i>
+      <%= f.text_field :email, :length => '40' %>
+      <%= f.label :email %>
+    </div>
+    <div class="actions">
+      <%= f.submit %>
+    </div>
+  <% end %><!--end form-->
+  <div class="col s6">
+    <%= image_tag "JoinUs.jpg", :class => "" %>
   </div>
-  <div class="field">
-    <%= f.label :password %><br>
-    <%= f.text_field :password %>
-  </div>
-  <div class="field">
-    <%= f.label :password_confirmation %><br>
-    <%= f.text_field :password_confirmation %>
-  </div>
-  <div class="field">
-    <%= f.label :email %><br>
-    <%= f.text_field :email %>
-  </div>
-  <div class="actions">
-    <%= f.submit %>
-  </div>
-<% end %>
+
+</div>
