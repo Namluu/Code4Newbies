@@ -10,5 +10,12 @@
   <%= @user.email %>
 </p>
 
+<div><%= gravatar_for @user %></div>
+
+<p>
+	URL: <%= link_to user_path(@user), @user %>
+</p>
+
+
 <%= link_to 'Edit', edit_user_path(@user) %> |
 <%= link_to 'Back', users_path %>
