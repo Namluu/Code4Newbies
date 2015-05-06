@@ -1,5 +1,5 @@
 <div class="row">
-  <%= form_for(@user, :html => {:class => "col s6"}) do |f| %>
+  <%= form_for(@user, :html => {:class => "col m6"}) do |f| %>
 
     <% if @user.errors.any? %>
     <div class="row">
@@ -39,8 +39,8 @@
       <%= f.submit %>
     </div>
   <% end %><!--end form-->
-  <div class="col s6">
-    <%= image_tag "JoinUs.jpg", :class => "" %>
+  <div class="col m6">
+    <%= image_tag "JoinUs.jpg", :class => "responsive-img" %>
   </div>
 
 </div>
