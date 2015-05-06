@@ -1,5 +1,5 @@
 <div class="row">
-  <%= form_for(@user, :html => {:class => "col m6"}) do |f| %>
+  <%= form_for(@user, :html => {:class => "col m6 s12"}) do |f| %>
 
     <% if @user.errors.any? %>
     <div class="row">
@@ -17,29 +17,27 @@
 
     <div class="input-field">
       <i class="mdi-action-account-circle prefix"></i>
-      <%= f.text_field :name, :length => '10' %>
-      <%= f.label :name %>
+      <%= f.text_field :name, :length => '10', :placeholder => 'Name' %>
     </div>
     <div class="input-field">
       <i class="mdi-action-lock prefix"></i>
-      <%= f.text_field :password %>
-      <%= f.label :password %>
+      <%= f.password_field :password, :placeholder => 'Password' %>
     </div>
     <div class="input-field">
       <i class="mdi-action-lock prefix"></i>
-      <%= f.text_field :password_confirmation %>
-      <%= f.label :password_confirmation %>
+      <%= f.password_field :password_confirmation, :placeholder => 'Password Confirmation' %>
     </div>
     <div class="input-field">
       <i class="mdi-communication-email prefix"></i>
-      <%= f.text_field :email, :length => '40' %>
-      <%= f.label :email %>
+      <%= f.text_field :email, :length => '40', :placeholder => 'Email' %>
     </div>
     <div class="actions">
-      <%= f.submit %>
+      <button class="btn waves-effect waves-light" type="submit" name="commit">Create User
+        <i class="mdi-content-send right"></i>
+      </button>
     </div>
   <% end %><!--end form-->
-  <div class="col m6">
+  <div class="col m6 s12">
     <%= image_tag "JoinUs.jpg", :class => "responsive-img" %>
   </div>
 
