@@ -6,7 +6,12 @@
     </head>
     <body>
         <%= render 'layouts/navigation' %>
-        
+
+
+        <% flash.each do |key, value| %>
+        <div class="alert alert-<%= key %>"><%= value %></div>
+        <% end %>
+
         <div class="row">
             <div class="col m10 offset-m1">
                 <%= yield %>
