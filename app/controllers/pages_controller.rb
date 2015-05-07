@@ -5,4 +5,8 @@ class PagesController < ApplicationController
 
   def contact
   end
+
+  def greeting
+  	render layout: "greeting"
+  end
 end

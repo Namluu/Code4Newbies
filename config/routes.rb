@@ -9,7 +9,10 @@ Rails.application.routes.draw do
 
   get 'pages/contact'
 
-  root 'videos#index'
+  get 'pages/greeting'
+
+  #root 'videos#index'
+  root 'pages#greeting'
 
   match '/signup' => 'users#new', via: [:get]
 
