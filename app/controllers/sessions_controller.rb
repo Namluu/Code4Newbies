@@ -11,7 +11,8 @@ class SessionsController < ApplicationController
   	else
   		flash[:success] = "Yes"
       sign_in user
-  		redirect_to user
+  		#redirect_to user
+      redirect_back_or user
   	end
   end
 
