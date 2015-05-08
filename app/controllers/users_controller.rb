@@ -10,7 +10,6 @@ class UsersController < ApplicationController
   # GET /users/1
   # GET /users/1.json
   def show
-    @a = User.authenticate("nam@a.com", "12345678")
   end
 
   # GET /users/new
