@@ -1,6 +1,38 @@
 <h1>Editing user</h1>
 
-<%= render 'form' %>
+<div class="row">
+  <%= form_for(@user, :html => {:class => "col m6 s12"}) do |f| %>
+
+    <%= render 'shared/error_messages' %>
+
+    <div class="input-field">
+      <i class="mdi-action-account-circle prefix"></i>
+      <%= f.text_field :name, :length => '10', :placeholder => 'Name' %>
+    </div>
+    <div class="input-field">
+      <i class="mdi-action-lock prefix"></i>
+      <%= f.password_field :password, :placeholder => 'Password' %>
+    </div>
+    <div class="input-field">
+      <i class="mdi-action-lock prefix"></i>
+      <%= f.password_field :password_confirmation, :placeholder => 'Password Confirmation' %>
+    </div>
+    <div class="input-field">
+      <i class="mdi-communication-email prefix"></i>
+      <%= f.text_field :email, :length => '40', :placeholder => 'Email' %>
+    </div>
+    <div class="actions">
+      <button class="btn waves-effect waves-light" type="submit" name="commit">Update
+        <i class="mdi-content-send right"></i>
+      </button>
+    </div>
+  <% end %><!--end form-->
+  <div class="col m6 s12">
+    <%= gravatar_for @user %>
+    <a href="http://gravatar.com/emails">change</a>
+  </div>
+
+</div>
 
 <%= link_to 'Show', @user %> |
 <%= link_to 'Back', users_path %>

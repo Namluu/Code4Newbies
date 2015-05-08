@@ -21,6 +21,15 @@ module SessionsHelper
 		current_user = nil
 	end
 
+	def deny_access
+		flash[:error] = "Please sign in to access this page"
+		redirect_to signin_path
+	end
+
+	def correct_user?(user)
+		user == current_user
+	end
+
 	private
 		def user_from_remember_token
 			User.authenticate_with_salt(*remember_token)
