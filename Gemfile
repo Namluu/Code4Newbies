@@ -38,8 +38,15 @@ gem 'tzinfo-data', platforms: [:mingw, :mswin]
 
 gem 'gravatar_image_tag', '1.2.0'
 
+gem 'will_paginate', '3.0.6'
+
 group :development, :test do
 	gem 'sqlite3'
+	# sample data
+	gem 'rspec-rails', '3.2.1'
+	gem 'annotate', '2.6.6'
+	gem 'faker', '0.3.1'
+
 end
 
 group :production do
